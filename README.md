@@ -1,6 +1,19 @@
-# Stock Analysis
-## Overview of the proje
+# Stock Analysis Using VBA
+## Overview of the project
+### Purpose
+Using data from 2017 and 2018 stock information, I refactored the VBA code to show a list of stocks that have the potential for investments. The original code was good, however the refactoring process helped to clean up the code by making it more efficient and taking out redundant parts.
+### Data 
+The data had 12 different stocks. Each of the respective year pages contain a column for date, open, high, low, close, adjusted close, and volume. Essentially, it follows the rise and fall of each stock value as the year progresses. The All Stocks Analysis sheet represents the stocks with a ticker, total daily volume, and the return in percents. The All Stocks Analysis was calculated using information from the year sheets.
 ## Results
+### Analysis
+The execution times between the original code and the refactored code was significantly different. The original run time for the 2017 and 2018 stocks was around 4 seconds. The refactored code was significantly less at around 1 second! The refactoring process saved a significant amount of time and improved the overall experience for the user since it was faster. The data shows that overall, 2017 was a much better for the majority of the stocks as 11/12 of them showed positive returns. On the other hand, the majority of 2018 stocks (10/12) showed negative returns.
+![Screen Shot 2022-07-27 at 1 44 13 PM](https://user-images.githubusercontent.com/106174279/181360173-e156689d-5772-4b5e-88f2-f45b1c5596c6.png)
+![Screen Shot 2022-07-27 at 1 40 07 PM](https://user-images.githubusercontent.com/106174279/181360233-43f0d99a-ac95-45c7-9f07-d7d495a11356.png)
+### The Code
+![Screen Shot 2022-07-27 at 1 55 05 PM](https://user-images.githubusercontent.com/106174279/181360487-005b984d-cdfd-44b3-ac52-5ef30adeb270.png)
+The most important part of the code was that each line has a label that describes the purpose of the code. It made my life much easier when I went back through to review the functionality and purpose. In the code snippet shared above, I first declared both the ticker ending prices and ticker starting prices as single variables because the data contains numbers with decimals points. tickervolumes was stored as a long variable type because it contained "long" numbers, ie the total daily volume for ticker "AY"(2017) says "136,070,900" and contains no decimal points. The next step was to use the tickerindex as the index so that the volume for the current ticker would be added to the current stock index.
 ## Summary
 ### What are the advantages or disadvantages of refactoring code?
+The advantages of refactoring code is first and foremost the readability. Typically refactored code is a lot easier to read and understand as all the unnecessary or cluttered parts are removed. It is important that only the essentials remain. The next advantage is the run time. With a more streamlined code, the run time is signifcantly faster and doesn't put as much stress on the computer. In the business world, time is money so this is an important thing to capitalize on. As far as the disadvantages go, it can be tedious for the programmer. It requires going through the original code and "editing" what is written. It may be time consuming for the programer to go through this process.
 ### How do these pros and cons apply to refactoring the original VBA script?
+The above mentioned pros and cons apply to this specific project because it was definitely a little tedious to go through the original code to see what could be more concise, but in the end it helped me to be a better programmer because I was able to understand the logic better and how to be more concise the first time so that my code is good to go in the beginning. Obviously, the run times were signifcantly shortened after the refactoring process so that helped Steve show his parents the results faster.
